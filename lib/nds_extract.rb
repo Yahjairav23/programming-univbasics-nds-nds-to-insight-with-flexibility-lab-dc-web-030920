@@ -77,10 +77,9 @@ def gross_per_studio(collection)
   row_index = 0 
   while row_index < collection.length do
         studio = collection[row_index][:studio]
+        gross_income = collection[row_index][:worldwide_gross] 
         
-        column_index = 0 
-        gross_income = collection[row_index][worldwide_gross] 
-        while column_index < collection[row_index].length do
+        if collection[studio]
           if studio == collection[row_index][:studio] 
             gross_income += collection[movie_index][:worldwide_gross]
           end

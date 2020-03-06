@@ -58,7 +58,8 @@ def movies_with_director_key(name, movies_collection)
   new_movies = []
   name_index = 0 
   while name_index < movies_collection.length do 
-    new_movies << movie_with_director_name(name, movies_collection[name_index])
+    movies = movies_collection[name_index]
+    new_movies << movie_with_director_name(name, movies)
     name_index += 1 
   end
   new_movies

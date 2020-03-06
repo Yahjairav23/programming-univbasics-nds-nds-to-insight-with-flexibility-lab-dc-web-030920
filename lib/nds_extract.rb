@@ -56,7 +56,8 @@ def movies_with_director_key(name, movies_collection)
   # movie_with_director_name method
   
   new_movies = []
-  while movie_with_director_name(name, movies_collection)
+  name_index = 0 
+  while name_index < movies_collection.length do 
   
 end
 

@@ -79,18 +79,13 @@ def gross_per_studio(collection)
         studio = collection[row_index][:studio]
         gross_income = collection[row_index][:worldwide_gross] 
         
-        if collection[studio]
-          if studio == collection[row_index][:studio] 
-            gross_income += collection[movie_index][:worldwide_gross]
-          end
-          column_index += 1 
-        end 
-        
-        result[studio] = gross_income
-        movie_index += 1 
-        
-      end
-      
+        if result[studio]
+          result[studio] += gross_income
+        else 
+          result[studio] = gross_income
+        end
+         
+       
   row_index +=1
   end
 

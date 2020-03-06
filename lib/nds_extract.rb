@@ -76,8 +76,6 @@ def gross_per_studio(collection)
     
   row_index = 0 
   while row_index < collection.length do
-      movie_index = 0 
-      while movie_index < collection[row_index].length do 
         studio = collection[row_index][:studio]
         
         column_index = 0 
